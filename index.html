@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A W Tech – Automação</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <style>
+        /* Fundo com a logo completa */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/img/logoawtech.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.12; /* controle de intensidade */
+            z-index: -1;
+        }
+
+        /* Logo transparente no topo */
+        .logo {
+            width: 160px;   /* ajuste como quiser */
+            height: auto;
+        }
+
+        header.header {
+            background: transparent !important; /* remover fundo antigo */
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-content">
+
+    <header class="header">
+        <div class="wrap">
+            <!-- Logo transparente -->
+            <img src="assets/img/logo.png" alt="A W Tech" class="logo" />
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button id="mobileBtn" class="mobile-btn" aria-expanded="false" aria-label="Abrir menu">☰</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-inner">
+                <h1>A W Tech</h1>
+                <p class="lead">Portas Automáticas • Controle de Acesso</p>
+                <a class="btn" href="#contato">Solicitar Orçamento</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <p class="sub">Soluções para empresas e residências com tecnologia e suporte local.</p>
+
+                <div class="grid">
+                    <article class="card">
+                        <img src="assets/img/controle-acesso.png" alt="Controle de Acesso" loading="lazy">
+                        <h3>Controle de Acesso</h3>
+                        <p>Soluções com biometria, tag e fechaduras eletrônicas.</p>
+                    </article>
+                    
+                    <article class="card">
+                        <img src="assets/img/porta-automatica.png" alt="Portas Automáticas" loading="lazy">
+                        <h3>Portas Automáticas</h3>
+                        <p>Instalação, manutenção e automação para portas deslizantes, pivotantes e especiais.</p>
+                    </article>
+
+                    <article class="card">
+                        <img src="assets/img/suporte.png" alt="Suporte Técnico" loading="lazy">
+                        <h3>Instalação & Suporte</h3>
+                        <p>Plano de manutenção preventiva e atendimento técnico especializado em Curitiba e região.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <div class="container">
+                <h2>Sobre a A W Tech</h2>
+                <p>Empresa com longa experiência em portas automáticas e controle de acesso — atendimento personalizado, peças de qualidade e equipe técnica certificada.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Solicite um orçamento via WhatsApp ou por e-mail.</p>
+
+                <div class="contact-row">
+                    <a class="btn whatsapp" href="https://wa.me/5541987022135">📞 WhatsApp</a>
+
+                    <form class="form" action="#" onsubmit="alert('Envio simulado — implemente backend'); return false;">
+                        <input name="nome" type="text" placeholder="Nome" required>
+                        <input name="telefone" type="tel" placeholder="Telefone ou WhatsApp" required>
+                        <textarea name="mensagem" placeholder="Mensagem" rows="3"></textarea>
+                        <button class="btn" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <a class="whats-float" href="https://wa.me/5541987022135" aria-label="WhatsApp link">💬</a>
+
+    <footer class="footer">
+        <div class="container">
+            <p>📞 WhatsApp: +55 41 98702-2135 • ✉️ awtechtelecom@gmail.com</p>
+            <p>© <span id="ano"></span> A W Tech — Curitiba</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
